@@ -4,7 +4,7 @@ from TicTacToeRect import ticTacToeRect
 from menuButton import MenuButton
 
 def get_font(size): # Returns Press-Start-2P in the desired size
-    return pygame.font.Font("font.ttf", size)
+    return pygame.font.Font("Fonts/font.ttf", size)
 
 def unOccupied(rects,pos,playerX): #returns the spot that was clicked as a tuple with (row,col,whether the spot is unoccupied)
    for i in range(0,3):
@@ -46,7 +46,7 @@ def tie(rects):
     return True
 
 def displayWin(playerX,screen):
-    BG = pygame.image.load("Background.png")
+    BG = pygame.image.load("Images/Background.png")
     screen.blit(BG, (0, 0))
     menuText = get_font(90).render("X wins", True, "#b68f40") if(playerX) else get_font(90).render("O wins", True, "#b68f40")
     menuRect = menuText.get_rect(center=(300, 70))
@@ -55,7 +55,7 @@ def displayWin(playerX,screen):
     yaySound.play()
 
 def displayTie(screen):
-    BG = pygame.image.load("Background.png")
+    BG = pygame.image.load("Images/Background.png")
     screen.blit(BG, (0, 0))
     youGuysText = get_font(45).render("you guys are", True, "#b68f40")
     screen.blit(youGuysText, (5,0))
@@ -158,14 +158,14 @@ SCREEN_WIDTH = 600
 SCREEN_HEIGHT = 600
 
 #loading sounds that we will use later
-occupiedSpotSound = pygame.mixer.Sound("occupied.mp3")
-yaySound = pygame.mixer.Sound("yay.mp3")
-wahwahWahSound = pygame.mixer.Sound("wahWahWah.mp3")
+occupiedSpotSound = pygame.mixer.Sound("soundEffects/occupied.mp3")
+yaySound = pygame.mixer.Sound("soundEffects/yay.mp3")
+wahwahWahSound = pygame.mixer.Sound("soundEffects/wahWahWah.mp3")
 
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 pygame.display.set_caption("tic tac toe") 
 
-BG = pygame.image.load("Background.png") #background image for the menu and for win and tie screens
+BG = pygame.image.load("Images/Background.png") #background image for the menu and for win and tie screens
 
 x = 0
 y = 0
@@ -182,11 +182,11 @@ for i in range(0,3): #this nested for loop is just to set up the rectangles, doi
     y += rectHeight
 
 #This button will only be there once there is a winner or a tie, and is used to go back to the main menu
-BACK_TO_MAIN_BUTTON = MenuButton(image=pygame.image.load("Play Rect.png"), pos=(300, 500),
+BACK_TO_MAIN_BUTTON = MenuButton(image=pygame.image.load("Images/Play Rect.png"), pos=(300, 500),
                          text_input="MENU", font=get_font(75), base_color="#d7fcd4", hovering_color="White")
 
 #This button will be used in the main menu
-PLAY_BUTTON = MenuButton(image=pygame.image.load("Play Rect.png"), pos=(300, 200), 
+PLAY_BUTTON = MenuButton(image=pygame.image.load("Images/Play Rect.png"), pos=(300, 200), 
                          text_input="PLAY", font=get_font(75), base_color="#d7fcd4", hovering_color="White")
 
 menu()
