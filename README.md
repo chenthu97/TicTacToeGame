@@ -23,13 +23,18 @@ Python,pygame
 Menu
 ![Screenshot 1](https://github.com/chenthu97/TicTacToeGame/blob/master/README/menuShot.png)
 
+in game
 ![Screenshot 2](https://github.com/chenthu97/TicTacToeGame/blob/master/README/inGameShot.png)
 
+instructions
 ![Screenshot 3](https://github.com/chenthu97/TicTacToeGame/blob/master/README/instructionShot.png)
 
+O won
 ![Screenshot 4](https://github.com/chenthu97/TicTacToeGame/blob/master/README/oWonShot.png)
 
+Tie
 ![Screenshot 5](https://github.com/chenthu97/TicTacToeGame/blob/master/README/tieShot.png)
 
+X won
 ![Screenshot 6](https://github.com/chenthu97/TicTacToeGame/blob/master/README/xWonShot.png)
 
