@@ -5,6 +5,8 @@ A simple project I made that enable's users to play tic tac toe. The project com
 
 In the single player mode the player will play against an AI(which use's the minimax algorithm)
 
+I have uploaded the game to itch.io, the link to play is here https://cdiggli.itch.io/basic-tic-tac-toe
+
 
 
 
