@@ -17,12 +17,12 @@ class MenuButton():
 			screen.blit(self.image, self.rect)
 		screen.blit(self.text, self.text_rect)
 
-	def checkForInput(self, position):
+	def checkForInput(self, position): #checking if the button has been clicked
 		if position[0] in range(self.rect.left, self.rect.right) and position[1] in range(self.rect.top, self.rect.bottom):
 			return True
 		return False
 
-	def changeColor(self, position) :
+	def changeColor(self, position) : #if the mouse hovers over the button we will change the colour of the button
 		if position[0] in range(self.rect.left, self.rect.right) and position[1] in range(self.rect.top, self.rect.bottom):
 			self.text = self.font.render(self.text_input, True, self.hovering_color)
 		else:
